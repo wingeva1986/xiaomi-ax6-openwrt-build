@@ -16,22 +16,25 @@ cd openwrt
 
 # 添加第三方软件包
 ## openclash
-git clone https://github.com/vernesong/OpenClash.git --single-branch --depth 1 package/new/luci-openclash
-bash ../scripts/download-openclash-core.sh
+# git clone https://github.com/vernesong/OpenClash.git --single-branch --depth 1 package/new/luci-openclash
+# bash ../scripts/download-openclash-core.sh
 
 ## argon theme
 git clone https://github.com/jerrykuku/luci-theme-argon.git --single-branch --depth 1 package/new/luci-theme-argon
 
 mkdir temp
-git clone https://github.com/immortalwrt/luci.git --single-branch --depth 1 temp/luci
-git clone https://github.com/immortalwrt/packages.git --single-branch --depth 1 temp/packages
+# git clone https://github.com/immortalwrt/luci.git --single-branch --depth 1 temp/luci
+# git clone https://github.com/immortalwrt/packages.git --single-branch --depth 1 temp/packages
 git clone https://github.com/immortalwrt/immortalwrt.git --single-branch --depth 1 temp/immortalwrt
 
 ## KMS激活
-mv temp/luci/applications/luci-app-vlmcsd package/new/luci-app-vlmcsd
-mv temp/packages/net/vlmcsd package/new/vlmcsd
-# edit package/new/luci-app-vlmcsd/Makefile
-sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' package/new/luci-app-vlmcsd/Makefile
+# mv temp/luci/applications/luci-app-vlmcsd package/new/luci-app-vlmcsd
+# mv temp/packages/net/vlmcsd package/new/vlmcsd
+# # edit package/new/luci-app-vlmcsd/Makefile
+# sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' package/new/luci-app-vlmcsd/Makefile
+
+rm -rf temp/luci/applications/luci-app-vlmcsd package/new/luci-app-vlmcsd
+rm -rf temp/packages/net/vlmcsd package/new/vlmcsd
 
 # AutoCore
 mv temp/immortalwrt/package/emortal/autocore package/new/autocore
