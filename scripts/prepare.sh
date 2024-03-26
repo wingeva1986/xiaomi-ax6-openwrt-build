@@ -23,8 +23,8 @@ cd openwrt
 git clone https://github.com/jerrykuku/luci-theme-argon.git --single-branch --depth 1 package/new/luci-theme-argon
 
 mkdir temp
-# git clone https://github.com/immortalwrt/luci.git --single-branch --depth 1 temp/luci
-# git clone https://github.com/immortalwrt/packages.git --single-branch --depth 1 temp/packages
+git clone https://github.com/immortalwrt/luci.git --single-branch --depth 1 temp/luci
+git clone https://github.com/immortalwrt/packages.git --single-branch --depth 1 temp/packages
 git clone https://github.com/immortalwrt/immortalwrt.git --single-branch --depth 1 temp/immortalwrt
 
 ## KMS激活
