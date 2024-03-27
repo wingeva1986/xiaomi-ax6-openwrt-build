@@ -8,8 +8,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-#   schedule:
-#     - cron: 15 21 2,7,12,17,22,27 * *
+  schedule:
+    - cron: 15 21 2,7,12,17,22,27 * *
 
 jobs:
   build:
