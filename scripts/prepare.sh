@@ -54,7 +54,7 @@ mv temp/immortalwrt/package/emortal/default-settings package/emortal/default-set
 bash ../scripts/fix-argon-css.sh
 
 # 增加 oh-my-zsh
-bash ../scripts/preset-terminal-tools.sh
+# bash ../scripts/preset-terminal-tools.sh
 
 # config file
 cp ../config/xiaomi_ax6-stock.config .config
