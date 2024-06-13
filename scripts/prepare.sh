@@ -56,6 +56,13 @@ bash ../scripts/fix-argon-css.sh
 # 增加 oh-my-zsh
 # bash ../scripts/preset-terminal-tools.sh
 
+# Modify default IP
+sed -i 's/10.10.10.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+
+# 修改连接数
+sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
+
 # config file
 cp ../config/xiaomi_ax6-stock.config .config
 make defconfig
