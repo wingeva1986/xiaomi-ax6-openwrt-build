@@ -1,15 +1,7 @@
 name: auto_compile_AX6
 
 on:
-  repository_dispatch:
   workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
-  schedule:
-    - cron: 15 21 2,7,12,17,22,27 * *
   # push:
   # watch:
   #   types: started
